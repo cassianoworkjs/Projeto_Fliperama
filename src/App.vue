@@ -1,9 +1,9 @@
 <template>
-  <div id="app" class="scanlines crt-effect">
+  <div id="app" class="scanlines">
     <!-- Arcade Header -->
     <header class="arcade-header">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid px-3 px-lg-5">
+      <nav class="navbar navbar-expand-xl navbar-dark">
+        <div class="container-fluid px-2 px-lg-4">
           <!-- Logo -->
           <router-link to="/" class="navbar-brand">
             <img src="/img/Nome_FDV.png" alt="Fliperama de Verdade" class="logo-img pixel-pop" />
@@ -20,7 +20,7 @@
           </button>
 
           <!-- Navigation -->
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav ms-auto ">
               <li class="nav-item">
                 <router-link to="/" class="nav-link arcade-nav-link">
@@ -141,31 +141,39 @@
 /* === ARCADE THEME === */
 #app {
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  background: #0a0a0f;
+  /* Gradiente fixo azul/vermelho arcade - cobre as laterais completamente */
+  background: linear-gradient(135deg, rgba(15, 15, 45, 0.75) 0%, rgba(35, 15, 55, 0.8) 50%, rgba(45, 10, 40, 0.75) 100%);
   color: #f0f0f0;
+  overflow-x: hidden;
 }
 
 /* Header */
 .arcade-header {
-  background: linear-gradient(135deg, rgba(10, 10, 20, 0.98) 0%, rgba(30, 15, 40, 0.98) 100%);
-  border-bottom: 3px solid;
-  border-image: linear-gradient(90deg, #ff8800, #ff3860, #ffcc00, #ff8800) 1;
+  background: linear-gradient(135deg, rgba(10, 10, 20, 0.75) 0%, rgba(30, 15, 40, 0.8) 100%);
+  border-bottom: 3px solid #ff8800;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 
     0 4px 30px rgba(255, 136, 0, 0.3),
     0 0 50px rgba(255, 56, 96, 0.2);
+  overflow: visible;
 }
 
 .navbar {
   padding: 0.5rem 0;
 }
 
+.navbar-nav {
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
 .logo-img {
-  max-width: 220px;
+  max-width: 180px;
   height: auto;
   transition: all 0.3s ease;
   filter: drop-shadow(0 0 10px rgba(255, 136, 0, 0.5));
@@ -192,25 +200,28 @@
 /* Arcade Nav Links */
 .arcade-nav-link {
   position: relative;
-  padding: 10px 20px !important;
-  margin: 5px 0;
+  padding: 6px 10px !important;
+  margin: 5px 1px;
   color: #e0e0e0 !important;
   font-family: 'Orbitron', sans-serif;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   border: 2px solid transparent;
-  border-radius: 8px;
+  border-radius: 6px;
   background: rgba(255, 136, 0, 0.05);
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .arcade-nav-link i {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+  flex-shrink: 0;
 }
 
 .arcade-nav-link:hover {
@@ -241,9 +252,8 @@
 
 /* Footer */
 .arcade-footer {
-  background: linear-gradient(135deg, rgba(10, 10, 20, 0.98) 0%, rgba(30, 15, 40, 0.98) 100%);
-  border-top: 3px solid;
-  border-image: linear-gradient(90deg, #ff8800, #ff3860, #ffcc00, #ff8800) 1;
+  background: linear-gradient(135deg, rgba(10, 10, 20, 0.75) 0%, rgba(30, 15, 40, 0.8) 100%);
+  border-top: 3px solid #ff8800;
   padding: 50px 20px 30px;
   margin-top: 60px;
 }
@@ -344,8 +354,8 @@
   transform: translateY(2px);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 991px) {
+/* Mobile Responsiveness - menu hambúrguer em telas menores que 1200px */
+@media (max-width: 1199px) {
   .logo-img {
     max-width: 180px;
   }
@@ -360,6 +370,9 @@
   .arcade-nav-link {
     width: 100%;
     justify-content: flex-start;
+    white-space: normal;
+    padding: 10px 15px !important;
+    font-size: 0.85rem;
   }
 }
 

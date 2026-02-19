@@ -241,7 +241,7 @@ export default {
   padding: 100px 20px;
   margin: -20px -15px 60px -15px;
   background: 
-    linear-gradient(135deg, rgba(10, 10, 20, 0.95) 0%, rgba(30, 15, 40, 0.98) 50%, rgba(10, 10, 20, 0.95) 100%),
+    linear-gradient(135deg, rgba(10, 10, 20, 0.4) 0%, rgba(30, 15, 40, 0.5) 50%, rgba(10, 10, 20, 0.4) 100%),
     repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 136, 0, 0.02) 2px, rgba(255, 136, 0, 0.02) 4px);
   overflow: hidden;
 }
@@ -313,6 +313,8 @@ export default {
   padding: 20px 10px;
   text-align: center;
   transition: all 0.3s ease;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .stat-box:hover {
@@ -323,19 +325,23 @@ export default {
 
 .stat-number {
   font-family: 'Press Start 2P', cursive;
-  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  font-size: clamp(0.75rem, 2vw, 1.6rem);
   color: #ffcc00;
   display: block;
   margin-bottom: 10px;
+  line-height: 1.3;
 }
 
 .stat-label {
   font-family: 'Orbitron', sans-serif;
-  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  font-size: clamp(0.55rem, 1.2vw, 0.85rem);
   color: #aaa;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Arcade Buttons */
@@ -428,27 +434,27 @@ export default {
 }
 
 .section-arcade:nth-child(even) {
-  background: rgba(255, 136, 0, 0.02);
+  background: rgba(255, 136, 0, 0.03);
 }
 
 .campeonatos-section {
   background: 
-    linear-gradient(135deg, rgba(255, 136, 0, 0.03) 0%, rgba(255, 56, 96, 0.03) 100%),
-    radial-gradient(circle at top right, rgba(255, 204, 0, 0.05) 0%, transparent 50%);
+    linear-gradient(135deg, rgba(255, 136, 0, 0.05) 0%, rgba(255, 56, 96, 0.05) 100%),
+    radial-gradient(circle at top right, rgba(255, 204, 0, 0.08) 0%, transparent 50%);
   border-top: 1px solid rgba(255, 136, 0, 0.1);
   border-bottom: 1px solid rgba(255, 136, 0, 0.1);
   padding: 80px 0;
 }
 
 .rankings-special {
-  background: linear-gradient(135deg, rgba(255, 204, 0, 0.05) 0%, rgba(255, 136, 0, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(255, 204, 0, 0.06) 0%, rgba(255, 136, 0, 0.06) 100%);
   border-top: 2px solid rgba(255, 204, 0, 0.2);
   border-bottom: 2px solid rgba(255, 204, 0, 0.2);
   padding: 80px 0;
 }
 
 .podcast-arcade {
-  background: linear-gradient(135deg, rgba(255, 56, 96, 0.05) 0%, rgba(255, 136, 0, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(255, 56, 96, 0.06) 0%, rgba(255, 136, 0, 0.06) 100%);
 }
 
 .section-header-arcade {
@@ -495,12 +501,15 @@ export default {
 
 .section-header-arcade h2 {
   font-family: 'Press Start 2P', cursive;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(0.7rem, 2.5vw, 1.5rem);
   color: #ff8800;
   margin: 0;
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .view-all-arcade {
@@ -593,6 +602,14 @@ export default {
 @media (max-width: 576px) {
   .stat-box {
     padding: 15px 8px;
+  }
+
+  .stat-number {
+    font-size: clamp(0.65rem, 4vw, 1rem);
+  }
+
+  .stat-label {
+    font-size: clamp(0.5rem, 2.5vw, 0.75rem);
   }
 }
 </style>
