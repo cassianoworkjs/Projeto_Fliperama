@@ -146,7 +146,7 @@
         <div class="footer-info">
           <span>Credits: {{ isUnlocked ? 'INF' : '99' }}</span>
           <span>{{ isUnlocked ? 'SPECIAL MODE ON' : 'Insert Coin' }}</span>
-          <span>© 1989 Pixel Team Corp</span>
+          <span>© GCG Team Corp</span>
         </div>
         <div class="footer-line"></div>
       </footer>
@@ -205,7 +205,7 @@ const secretMember = {
   funcao: "THE CREATOR (SECRET)",
   bio: "Você desbloqueou o desenvolvedor lendário. Com o Konami Code ativo, todos os limites de processamento foram removidos.",
   stats: { forca: 100, agilidade: 100, intel: 100 },
-  sprite: "https://api.dicebear.com/7.x/pixel-art/svg?seed=Legend&backgroundColor=facc15"
+  sprite: "/img/finalboss.png"
 };
 
 const equipe = computed(() => isUnlocked.value ? [...baseEquipe, secretMember] : baseEquipe);
