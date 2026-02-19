@@ -1,0 +1,495 @@
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family:
+    "Bangers", cursive, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("/img/fundo.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #f0f0f0;
+  padding: 0;
+  margin: 0;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* (restante do CSS continua igual ao original...) */
+
+/* === HEADER & NAVIGATION === */
+header {
+  background-color: rgba(0, 0, 0, 0.5); /* fundo preto semi-transparente */
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 2px solid #444;
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(4px); /* Safari support */
+  backdrop-filter: blur(4px); /* suaviza o fundo se disponível */
+}
+
+.logo img {
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 55px;
+}
+
+nav ul li a {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: inherit;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ff3860;
+}
+
+/* === TYPOGRAPHY === */
+h1,
+h2,
+h3,
+.logo h1 {
+  font-family: "Press Start 2P", cursive;
+  text-transform: uppercase;
+}
+
+main {
+  flex: 1;
+}
+
+main section {
+  padding: 40px 0;
+  border-bottom: 1px solid #333;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+section h2 {
+  color: #ff8800;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+section p,
+section ul,
+section ol {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+ul,
+ol {
+  margin-left: 20px;
+  padding-left: 15px;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #333;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
+
+/* === COMPONENTS === */
+
+/* Botões */
+.btn-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #ff3860;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+  background-color: #ff1744;
+}
+
+/* Posts / Novidades */
+#posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.post {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 15px;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.post:hover {
+  transform: scale(1.02);
+}
+
+.post h3 {
+  color: #ff8800;
+}
+
+.post p {
+  color: #ccc;
+}
+
+/* Podcast */
+#podcast-container {
+  display: flex;
+  justify-content: center;
+}
+
+.podcast-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.podcast-card:hover {
+  transform: scale(1.02);
+}
+
+.podcast-card img {
+  width: 150px;
+  border-radius: 6px;
+}
+
+.podcast-card h3 {
+  color: #ff8800;
+}
+
+.podcast-card a {
+  color: #ff3860;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.podcast-card a:hover {
+  text-decoration: underline;
+}
+
+/* Galeria */
+
+#galeria-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.galeria-thumb {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.galeria-thumb:hover {
+  transform: scale(1.05);
+}
+
+/* Equipe */
+#equipe-container,
+#index-equipe-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.membro {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  width: 180px;
+  text-align: center;
+}
+
+.membro img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.membro-info h3,
+.membro h3 {
+  color: #ff8800;
+}
+
+.membro-info p,
+.membro p {
+  color: #ccc;
+}
+
+/* Campeonatos */
+#campeonatos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.campeonato {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.campeonato:hover {
+  transform: scale(1.03);
+}
+
+.campeonato h3 {
+  color: #ff8800;
+}
+
+/* Ranking */
+.ranking-box {
+  background-color: #111;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.ranking-box h3 {
+  color: #ff8800;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.ranking-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.jogador {
+  background-color: #111;
+  border: 2px solid #ff8800;
+  color: #ff8800;
+  border-radius: 10px;
+  padding: 15px;
+  width: 180px;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  box-shadow: 0 0 10px rgba(255, 136, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.jogador:hover {
+  transform: scale(1.05);
+}
+
+.jogador.lider {
+  background-color: #1a1a1a;
+  border-color: #ffcc00;
+  color: #ffcc00;
+}
+
+/* Histórico */
+.historico-card {
+  background-color: #111;
+  border: 1px solid #333;
+  padding: 10px;
+  max-width: 600px;
+  margin: 10px auto;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.historico-card img {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.historico-card h3 {
+  color: #ff8800;
+}
+
+.historico-card p {
+  color: #ccc;
+}
+
+.historico-card .btn-link {
+  background-color: transparent;
+  color: #ff3860;
+  border: 1px solid #ff3860;
+  font-size: 0.9rem;
+}
+
+.historico-card .btn-link:hover {
+  background-color: #ff3860;
+  color: #fff;
+}
+.ranking-equipe-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Mais espaço entre os cards */
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.ranking-card-equipe {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 25px;
+  width: 320px; /* Mais largo para parecer retângulo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #ccc;
+  font-family: "Press Start 2P", cursive;
+  transition: transform 0.2s ease;
+}
+
+.ranking-card-equipe h3 {
+  color: #ff8800;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.ranking-card-equipe p {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-bottom: 12px;
+}
+
+.ranking-card-equipe:hover {
+  transform: scale(1.05);
+}
+
+#podcast > p {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #fff;
+}
+#equipe > p {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #fff;
+}
+/* Animação nos cards de equipe */
+.membro {
+  transition: transform 0.2s ease;
+}
+
+.membro:hover {
+  transform: scale(1.03);
+}
+/* === Rankings por Modalidade (Dinâmicos) === */
+#ranking-modalidade-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.ranking-modalidade {
+  background-color: #1e1e1e;
+  border: 2px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.ranking-modalidade:hover {
+  transform: scale(1.03);
+}
+
+.ranking-modalidade h3 {
+  font-family: "Press Start 2P", cursive;
+  color: #ff8800;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.ranking-modalidade ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+.ranking-modalidade li {
+  font-family: "Bangers", cursive;
+  font-size: 1.3rem;
+  color: #ddd;
+  margin: 8px 0;
+}
+#proximo-campeonato {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#proximo-campeonato .campeonato {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+#proximo-campeonato .campeonato:hover {
+  transform: scale(1.03);
+}
+
+#proximo-campeonato .campeonato h3 {
+  color: #ff8800;
+}

@@ -127,8 +127,9 @@
         <div class="row mt-4 pt-4 border-top border-secondary">
           <div class="col-12 text-center">
             <p class="copyright mb-0">
-              <i class="bi bi-c-circle"></i> 2026 Fliperama de Verdade. 
-              <span class="blink">█</span> Todos os direitos reservados.
+              <i class="bi bi-c-circle"></i> 2026 Fliperama de Verdade • 
+              <span class="blink">█</span> Desenvolvido por GCG Tech • 
+            
             </p>
           </div>
         </div>
