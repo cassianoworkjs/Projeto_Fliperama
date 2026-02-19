@@ -3,7 +3,7 @@
     <!-- Arcade Header -->
     <header class="arcade-header">
       <nav class="navbar navbar-expand-xl navbar-dark">
-        <div class="container-fluid px-2 px-lg-4">
+        <div class="container-fluid px-2 px-lg-3">
           <!-- Logo -->
           <router-link to="/" class="navbar-brand">
             <img src="/img/Nome_FDV.png" alt="Fliperama de Verdade" class="logo-img pixel-pop" />
@@ -170,10 +170,15 @@
 .navbar-nav {
   flex-wrap: nowrap;
   justify-content: flex-end;
+  gap: 4px;
+}
+
+.navbar-nav .nav-item {
+  margin: 0;
 }
 
 .logo-img {
-  max-width: 180px;
+  max-width: 160px;
   height: auto;
   transition: all 0.3s ease;
   filter: drop-shadow(0 0 10px rgba(255, 136, 0, 0.5));
@@ -197,30 +202,30 @@
   box-shadow: 0 0 15px rgba(255, 136, 0, 0.6);
 }
 
-/* Arcade Nav Links */
+/* Arcade Nav Links - compactos e próximos para caber todos no desktop */
 .arcade-nav-link {
   position: relative;
-  padding: 6px 10px !important;
-  margin: 5px 1px;
+  padding: 5px 6px !important;
+  margin: 2px 0;
   color: #e0e0e0 !important;
   font-family: 'Orbitron', sans-serif;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   border: 2px solid transparent;
-  border-radius: 6px;
+  border-radius: 5px;
   background: rgba(255, 136, 0, 0.05);
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 3px;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .arcade-nav-link i {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   flex-shrink: 0;
 }
 
@@ -354,8 +359,30 @@
   transform: translateY(2px);
 }
 
-/* Mobile Responsiveness - menu hambúrguer em telas menores que 1200px */
-@media (max-width: 1199px) {
+/* Telas médias - nav bem compacto para caber todos os itens */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .navbar-nav {
+    gap: 2px;
+  }
+
+  .logo-img {
+    max-width: 140px;
+  }
+
+  .arcade-nav-link {
+    padding: 4px 5px !important;
+    margin: 1px 0;
+    font-size: 0.6rem;
+    gap: 2px;
+  }
+
+  .arcade-nav-link i {
+    font-size: 0.75rem;
+  }
+}
+
+/* Mobile Responsiveness - menu hambúrguer em telas menores que 992px */
+@media (max-width: 991px) {
   .logo-img {
     max-width: 180px;
   }
