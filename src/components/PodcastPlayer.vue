@@ -158,10 +158,15 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .podcast-player {
+    margin: 0 10px;
+  }
+
   .podcast-content {
     grid-template-columns: 1fr;
     gap: 20px;
     text-align: center;
+    padding: 25px 20px;
   }
   
   .podcast-cover {
@@ -170,6 +175,34 @@ export default {
   
   .podcast-meta {
     justify-content: center;
+  }
+
+  .podcast-player h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .podcast-content {
+    padding: 20px 15px;
+    gap: 15px;
+  }
+
+  .podcast-player h3 {
+    font-size: 1.1rem;
+  }
+
+  .podcast-description {
+    font-size: 0.9rem;
+  }
+
+  .podcast-meta {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .audio-player {
+    width: 100%;
   }
 }
 </style>

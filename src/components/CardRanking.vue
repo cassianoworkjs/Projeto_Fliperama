@@ -136,4 +136,34 @@ export default {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-4px); }
 }
+
+@media (max-width: 576px) {
+  .ranking-header {
+    padding: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .ranking-card h3 {
+    font-size: 0.85rem;
+  }
+
+  .ranking-body {
+    padding: 15px;
+  }
+
+  .ranking-list li {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .player-position {
+    min-width: 28px;
+    font-size: 0.7rem;
+  }
+
+  .player-name {
+    font-size: 0.9rem;
+  }
+}
 </style>

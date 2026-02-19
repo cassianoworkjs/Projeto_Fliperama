@@ -743,8 +743,8 @@ onUnmounted(() => {
   }
   
   .footer-info {
-    gap: 1rem;
-    font-size: 0.45rem;
+    gap: 0.75rem;
+    font-size: 0.85rem;
   }
 }
 </style>

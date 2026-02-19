@@ -416,24 +416,31 @@ export default {
   .page-header h1 {
     font-size: 1.5rem;
   }
-  
+
   .section-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
   }
-  
+
   .cards-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
-  
+
   /* Reduce background effects on mobile */
   .pacman, .ghost, .hadouken, .lightning {
     display: none;
   }
-  
+
   .flame {
     height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cards-grid {
+    gap: 15px;
   }
 }
 </style>

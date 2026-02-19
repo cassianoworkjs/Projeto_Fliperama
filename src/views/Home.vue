@@ -571,37 +571,77 @@ export default {
 @media (max-width: 768px) {
   .hero-arcade {
     min-height: 60vh;
-    padding: 60px 15px;
+    padding: 50px 12px;
+    margin: -20px -12px 40px -12px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+    padding: 0 10px;
   }
 
   .section-arcade {
     padding: 40px 0;
   }
 
+  .section-arcade .container-fluid {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
   .section-header-arcade {
     flex-direction: column;
     align-items: flex-start;
+    gap: 15px;
+  }
+
+  .section-header-arcade h2 {
+    font-size: clamp(0.65rem, 2.5vw, 1rem);
+    line-height: 1.5;
+  }
+
+  .view-all-arcade {
+    font-size: 0.8rem;
+    padding: 8px 14px;
   }
 
   .btn-arcade {
     width: 100%;
     justify-content: center;
-    font-size: 0.9rem;
-    padding: 12px 25px;
+    font-size: 0.85rem;
+    padding: 12px 20px;
+  }
+
+  .campeonatos-section,
+  .rankings-special {
+    padding: 50px 0;
   }
 
   .insert-coin-section {
-    padding: 60px 15px;
+    padding: 50px 12px;
   }
 
   .coin-box {
     padding: 30px 20px;
   }
+
+  .coin-box h3 {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+  }
 }
 
 @media (max-width: 576px) {
+  .hero-arcade {
+    padding: 40px 10px;
+    margin: -20px -10px 30px -10px;
+  }
+
   .stat-box {
-    padding: 15px 8px;
+    padding: 12px 6px;
   }
 
   .stat-number {
@@ -609,7 +649,20 @@ export default {
   }
 
   .stat-label {
-    font-size: clamp(0.5rem, 2.5vw, 0.75rem);
+    font-size: clamp(0.5rem, 2.5vw, 0.7rem);
+  }
+
+  .section-arcade .container-fluid {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .insert-coin-section {
+    padding: 40px 10px;
+  }
+
+  .coin-box {
+    padding: 25px 15px;
   }
 }
 </style>

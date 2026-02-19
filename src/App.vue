@@ -378,19 +378,65 @@
 
 @media (max-width: 768px) {
   .arcade-main {
-    padding: 15px 10px;
+    padding: 15px 12px;
   }
 
   .arcade-footer {
-    padding: 40px 20px 20px;
+    padding: 30px 16px 20px;
+  }
+
+  .arcade-footer .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .footer-title {
     font-size: 1.2rem;
   }
 
+  .footer-subtitle {
+    margin-top: 1.5rem;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-links a,
+  .footer-links li {
+    justify-content: center;
+  }
+
   .social-icons {
     justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .arcade-main {
+    padding: 12px 10px;
+  }
+
+  .arcade-footer {
+    padding: 25px 12px 16px;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .footer-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .footer-links li {
+    font-size: 0.9rem;
+  }
+
+  .container-fluid {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 }
 </style>

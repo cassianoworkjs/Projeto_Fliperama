@@ -16,4 +16,16 @@ export default {
   padding: 40px;
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  .podcast {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .podcast {
+    padding: 20px 15px;
+  }
+}
 </style>

@@ -49,6 +49,38 @@ export default {
   box-shadow: 0 10px 30px rgba(255, 136, 0, 0.3);
 }
 
+@media (max-width: 576px) {
+  .campeonato {
+    min-width: 0;
+  }
+
+  .card-header {
+    padding: 20px 15px 15px;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .info-row {
+    font-size: 0.95rem;
+    padding: 10px 0;
+  }
+
+  .info-row.prize span {
+    font-size: 1.1rem;
+  }
+
+  .btn-inscricao {
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+}
+
 .card-badge {
   position: absolute;
   top: 15px;

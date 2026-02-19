@@ -42,6 +42,34 @@ export default {
   box-shadow: 0 8px 30px rgba(255, 56, 96, 0.3);
 }
 
+@media (max-width: 576px) {
+  .post {
+    min-width: 0;
+  }
+
+  .post-content,
+  .post-footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .post-content {
+    padding-top: 15px;
+  }
+
+  .post-footer {
+    padding-bottom: 15px;
+  }
+
+  .post h3 {
+    font-size: 1.05rem;
+  }
+
+  .post p {
+    font-size: 0.9rem;
+  }
+}
+
 .post-header {
   display: flex;
   justify-content: space-between;

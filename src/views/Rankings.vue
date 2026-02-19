@@ -204,13 +204,24 @@ export default {
   .page-header h1 {
     font-size: 1.5rem;
   }
-  
+
   .cards-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
-  
+
   .game-filters {
     justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .cards-grid {
+    gap: 15px;
   }
 }
 </style>
